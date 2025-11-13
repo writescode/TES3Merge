@@ -1,5 +1,14 @@
 # TES3Merge Changelog
 
+## v0.12.0 (2025-11-12)
+
+This build contains many updates by [Dave Corley](https://github.com/magicaldave):
+
+* Improved OpenMW and Linux support.
+* The application name is now lowercase. Please delete existing binaries if updating on a case-sensitive file system.
+* tes3merge.ini configuration files are loaded from the working directory first, if available.
+* tes3merge will focus on installations in the working directory first, before scanning parent directories.
+
 ## v0.11.2 (2025-01-19)
 
 * Don't parse files inside .git folders.
