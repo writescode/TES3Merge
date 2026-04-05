@@ -28,7 +28,7 @@ public static class StreamExtensions
         var size = Marshal.SizeOf<T>();
 
         var m_temp = new byte[size];
-        m_stream.Read(m_temp, 0, size);
+        m_stream.ReadExactly(m_temp, 0, size);
 
         var handle = GCHandle.Alloc(m_temp, GCHandleType.Pinned);
         T item = Marshal.PtrToStructure<T>(handle.AddrOfPinnedObject());
@@ -57,7 +57,7 @@ public static class StreamExtensions
         var m_temp = new byte[size];
         for (uint i = 0; i < count; i++)
         {
-            m_stream.Read(m_temp, 0, size);
+            m_stream.ReadExactly(m_temp, 0, size);
 
             var handle = GCHandle.Alloc(m_temp, GCHandleType.Pinned);
             items[i] = Marshal.PtrToStructure<T>(handle.AddrOfPinnedObject());
