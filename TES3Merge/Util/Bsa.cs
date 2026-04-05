@@ -82,7 +82,7 @@ public class BSAFile
             }
 
             var buffer = new byte[len];
-            stream.Read(buffer);
+            stream.ReadExactly(buffer);
             var s = System.Text.Encoding.UTF8.GetString(buffer, 0, buffer.Length).TrimEnd('\0');
             fileNames.Add(s);
         }

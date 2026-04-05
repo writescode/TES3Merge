@@ -96,7 +96,7 @@ public class ALCH : RecordTest<TES3Lib.Records.ALCH>
         Assert.AreEqual(MergedDefault.ENAM.Count, GetCached("merge_add_effects.esp").ENAM.Count);
 
         // Make sure we ended up with the right first effect.
-        Assert.AreEqual(MergedDefault.ENAM[0].MagicEffect, TES3Lib.Enums.MagicEffect.BoundCuirass);
+        Assert.AreEqual(TES3Lib.Enums.MagicEffect.BoundCuirass, MergedDefault.ENAM[0].MagicEffect);
 
         // Make sure all the properties were respected from the changed effect.
         // We don't want a changed effect to end up with a bunch of invalid properties.

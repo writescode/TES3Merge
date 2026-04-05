@@ -87,9 +87,9 @@ public class Morrowind
         }
 
         _logger.LogInformation("Archives: {list}", Install.Archives);
-        Assert.AreEqual(Install.Archives[0], "Morrowind.bsa");
-        Assert.AreEqual(Install.Archives[1], "Tribunal.bsa");
-        Assert.AreEqual(Install.Archives[2], "Bloodmoon.bsa");
+        Assert.AreEqual("Morrowind.bsa", Install.Archives[0]);
+        Assert.AreEqual("Tribunal.bsa", Install.Archives[1]);
+        Assert.AreEqual("Bloodmoon.bsa", Install.Archives[2]);
     }
 
     [TestMethod]
@@ -117,9 +117,9 @@ public class Morrowind
         }
 
         _logger.LogInformation("Game Files: {list}", Install.GameFiles);
-        Assert.AreEqual(Install.GameFiles[0], "Morrowind.esm");
-        Assert.AreEqual(Install.GameFiles[1], "Tribunal.esm");
-        Assert.AreEqual(Install.GameFiles[2], "Bloodmoon.esm");
+        Assert.AreEqual("Morrowind.esm", Install.GameFiles[0]);
+        Assert.AreEqual("Tribunal.esm", Install.GameFiles[1]);
+        Assert.AreEqual("Bloodmoon.esm", Install.GameFiles[2]);
     }
 
     [TestMethod]
